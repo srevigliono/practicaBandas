@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <ul>
+        <% bandas.forEach(function(banda) { %>
+            <li>
+                <strong>Nombre:</strong> <%= banda.nombre %><br>
+                <strong>Integrantes:</strong> <%= banda.integrantes %><br>
+                <strong>Género:</strong> <%= banda.genero %><br>
+                <strong>Top Canciones:</strong>
+                <ul>
+                    <% banda.topCanciones.forEach(function(cancion) { %>
+                        <li><%= cancion %></li>
+                    <% }) %>
+                </ul>
+
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
