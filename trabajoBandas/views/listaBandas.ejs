@@ -12,17 +12,10 @@
                 </li>
             <% }) %>
         </ul>
-        <p>Género buscado: <%= genero %></p>
-        <div>
-          <% if(bandas.length === 0){ %>
-            <p>¡NO hay bandas del género buscado!</p>
-          <% }else{ %>
-          <ul>
-            <% for(i = 0; i < bandas.length; i++){ %>
-              <li><%= bandas[i].genero %></li>
-            <% }%>
-          </ul>
-          <% } %>
+
+
+        
+
         </div>
     </body>
     </html>
