@@ -1,31 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
+    <title><%= bandas.nombre %></title>
 </head>
 <body>
-    <h1><%= title %></h1>
-    <ul>
-        <% bandas.forEach(function(banda) { %>
-            <li>
-                <h3><%= banda.nombre %></h3>
-            </li>
-        <% }) %>
-    </ul>
-    <% bandas.forEach(function(banda) { %>
-        <img src="" alt="">
-        <p>Detalle de la banda: <%= bandas.nombre %></p>
-            <li>Género: <%= bandas.genero %> </li>
-            <li>Integranes : <%= bandas.integrantes></li>
-            <li>Mejores canciones: <%= bandas.topCanciones %></li>
-    <% }) %>
-    <div>
+    <h1><%= bandas.nombre %></h1>
+    <img src="<%= Banda.cover %>" alt="<%= Banda.nombre %>">
+    <a href="/bandas/genero"><p> Genero de <%= bandas.nombre %>: <%= bandas.genero %> </p></a>
+    <p>Integrantes: <%= bandas.Integrantes %></p>
+    <p>Canciones top:</p>
       <ul>
-        <% for(i = 0; i < bandas.length; i++){ %>
-          <li><%= bandas[i].Detalle %></li>
-        <% }%>
+        <%= for(let i = 0; i < bandas.topCanciones; i++) %>
       </ul>
-      <% } %>
-    </div>
 </body>
 </html>
